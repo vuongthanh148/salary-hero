@@ -4,6 +4,8 @@
 
 ## Table of Contents <!-- omit in toc -->
 
+- [Entities](#entities)
+  - [Employee](#employee)
 - [Working with database schema (TypeORM)](#working-with-database-schema-typeorm)
   - [Generate migration](#generate-migration)
   - [Run migration](#run-migration)
@@ -15,6 +17,68 @@
   - [Run seed (TypeORM)](#run-seed-typeorm)
 
 ---
+
+## Entities
+
+### Employee
+
+```ts
+@Entity({
+  name: 'employee',
+})
+export class EmployeeEntity {
+  @ApiResponseProperty({
+    type: String,
+  })
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
+
+  @ApiResponseProperty({
+    type: String,
+    example: 'Stephen',
+  })
+  @Column({ type: String, unique: false, nullable: false })
+  @Index()
+  name: string;
+
+  @ApiResponseProperty({
+    type: Number,
+    example: 1000,
+  })
+  @Column({ type: 'real', unique: false, nullable: false })
+  balance: number;
+
+  @ApiResponseProperty({
+    type: Number,
+    example: 10,
+  })
+  @Column({ type: Number, unique: false, nullable: false })
+  workDay: number;
+
+  @ApiResponseProperty({
+    type: String,
+    example: WorkType.Monthly,
+  })
+  @Column({ type: 'enum', enum: WorkType, unique: false, nullable: false })
+  @Index()
+  workType: string;
+
+  @ApiResponseProperty({
+    type: Number,
+    example: 10000.5,
+  })
+  @Column({ type: 'real', unique: false, nullable: false })
+  salary: number;
+
+  @ApiResponseProperty()
+  @CreateDateColumn()
+  createdAt: Date;
+
+  @ApiResponseProperty()
+  @UpdateDateColumn()
+  updatedAt: Date;
+}
+```
 
 ## Working with database schema (TypeORM)
 
