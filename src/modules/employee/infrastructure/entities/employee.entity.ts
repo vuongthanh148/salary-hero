@@ -2,6 +2,7 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  Index,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -31,6 +32,7 @@ export class EmployeeEntity {
     example: 'Stephen',
   })
   @Column({ type: String, unique: false, nullable: false })
+  @Index()
   name: string;
 
   @ApiResponseProperty({
@@ -52,6 +54,7 @@ export class EmployeeEntity {
     example: WorkType.Monthly,
   })
   @Column({ type: 'enum', enum: WorkType, unique: false, nullable: false })
+  @Index()
   workType: string;
 
   @ApiResponseProperty({

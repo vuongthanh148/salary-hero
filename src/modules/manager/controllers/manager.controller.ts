@@ -1,5 +1,5 @@
 import { Controller, Get, HttpCode, HttpStatus } from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { ManagerService } from '../services/manager.service';
 
 @ApiTags('Manager')
@@ -10,9 +10,7 @@ import { ManagerService } from '../services/manager.service';
 export class ManagerController {
   constructor(private readonly managerService: ManagerService) {}
 
-  //   @ApiOkResponse({
-  //     type: 'Success',
-  //   })
+  @ApiOkResponse({})
   @Get('update-balance')
   @HttpCode(HttpStatus.OK)
   updateBalance() {
