@@ -1,15 +1,4 @@
-# Salary Hero Assignment
-
-## Description <!-- omit in toc -->
-
-NestJS application for calculating employee's balance.
-
-[Full documentation here](/docs/readme.md)
-
-## Table of Contents <!-- omit in toc -->
-
-- [Features](#features)
-- [Author](#author)
+# Introduction
 
 ## Features
 
@@ -23,6 +12,8 @@ NestJS application for calculating employee's balance.
 - [x] Docker.
 - [x] Pre-commit check with eslint and prettier.
 
-## Author
+---
 
-- [Stephen Vuong](https://www.linkedin.com/in/vuongthanh148)
+Previous: [Main](readme.md)
+
+Next: [Installing and Running](installing-and-running.md)
