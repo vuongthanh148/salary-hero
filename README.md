@@ -1,6 +1,6 @@
 # Salary Hero Assignment
 
-(Yes I passed this job but the offer was not matched my expectation)
+(Yes I passed this job but the offer did not matched my expectations)
 
 ## Description <!-- omit in toc -->
 
